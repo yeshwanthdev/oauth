@@ -1,0 +1,6 @@
+{
+	"VerificationType": {
+		"EMAILVERIFICATION": "EmailVerification",
+		"PASSWORDRESET ": "PasswordReset "
+	}
+}
