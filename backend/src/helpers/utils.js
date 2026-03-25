@@ -23,7 +23,7 @@ class Utils {
 
 	get commonSchema() {
 		return {
-			code: { type: String, default: null },
+			code: { type: String, default: this.guid },
 			dateCreated: { type: Date, default: rm.utils.UTCDateNow },
 			dateModified: { type: Date, default: rm.utils.UTCDateNow },
 			createdBy: { type: rm.mongoose.Schema.Types.ObjectId, ref: 'users' },
