@@ -25,8 +25,16 @@ class RM {
 		return require('@config/enums.json');
 	}
 
+	get assert() {
+		return require('@helper/assert');
+	}
+
 	get responseService() {
 		return require('@service/response');
+	}
+
+	get emailService() {
+		return require('@service/email');
 	}
 
 	get config() {

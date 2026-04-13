@@ -12,8 +12,8 @@ class ResponseService {
 
 	success(params) {
 		try {
-			const output = { success: true, data: params.data, message: params?.message || null };
-
+			const output = { success: true, message: params?.message || null };
+			if (params.data) output.data = params.data;
 			output.requestId = this.req.requestId;
 
 			return this.res.status(200).send(output);
