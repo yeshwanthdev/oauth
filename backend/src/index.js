@@ -19,11 +19,9 @@ app.use(require('@middleware/cors'));
 
 //routes
 app.use('/auth', require('@route/auth')); //whitelist later
+app.get('/', (req, res) => res.status(200).json({ status: 'ok' }));
+app.use(require('@middleware/error-handler'));
 
-//healthcheck
-app.get('/', (req, res) => {
-	res.status(200).json({ status: 'ok' });
-});
 
 async function startServer() {
 	await connectDB();

@@ -8,7 +8,7 @@ const verificationSchema = new mongoose.Schema({
 	type: {
 		type: String,
 		required: true,
-		enum: [rm.enums.VerificationType.EMAILVERIFICATION, rm.enums.VerificationType.PASSWORDRESET],
+		enum: [rm.enums.verificationType.EMAILVERIFICATION, rm.enums.verificationType.PASSWORDRESET],
 	},
 	expiresAt: { type: Date, required: true, default: rm.utils.date.oneYearFromNow },
 });
